@@ -1,0 +1,23 @@
+{
+  "name": "mailmind",
+  "version": "0.1.0",
+  "description": "Intelligent Email Client with RAG Implementation",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd src/backend && npm run dev",
+    "dev:frontend": "cd src/frontend && npm run dev",
+    "build": "npm run build:backend && npm run build:frontend",
+    "test": "jest",
+    "lint": "eslint src/**/*.{js,ts,jsx,tsx}"
+  },
+  "keywords": ["email", "ai", "rag", "semantic-search"],
+  "author": "Michael Nikolaus",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "eslint": "^8.50.0",
+    "jest": "^29.7.0",
+    "typescript": "^5.2.0"
+  }
+}
