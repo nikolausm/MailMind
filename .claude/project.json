@@ -1,0 +1,95 @@
+{
+  "project": {
+    "name": "MailMind",
+    "description": "Intelligent Email Client with RAG Implementation",
+    "version": "0.1.0",
+    "type": "fullstack",
+    "primaryLanguages": ["python", "typescript", "javascript"],
+    "frameworks": ["fastapi", "react", "nodejs"]
+  },
+  "agents": {
+    "email-processor": {
+      "description": "Processes incoming emails and triggers appropriate AI agents",
+      "responsibilities": [
+        "Parse email content and metadata",
+        "Trigger classification agent",
+        "Trigger tagging agent",
+        "Store processed emails in database"
+      ],
+      "files": [
+        "src/ai/agents/email_classifier.py",
+        "src/ai/agents/tagging_agent.py"
+      ]
+    },
+    "search-engine": {
+      "description": "Handles semantic search queries and vector operations",
+      "responsibilities": [
+        "Process natural language queries",
+        "Generate embeddings",
+        "Query vector database",
+        "Rank and return results"
+      ],
+      "files": [
+        "src/ai/agents/search_agent.py"
+      ]
+    },
+    "api-developer": {
+      "description": "Develops and maintains REST API endpoints",
+      "responsibilities": [
+        "Create FastAPI endpoints",
+        "Implement authentication",
+        "Handle email CRUD operations",
+        "Integrate with AI agents"
+      ],
+      "files": [
+        "src/backend/api/",
+        "src/backend/services/"
+      ]
+    },
+    "frontend-developer": {
+      "description": "Builds React UI components and pages",
+      "responsibilities": [
+        "Create responsive UI components",
+        "Implement search interface",
+        "Build email management views",
+        "Integrate with backend API"
+      ],
+      "files": [
+        "src/frontend/components/",
+        "src/frontend/pages/"
+      ]
+    },
+    "database-architect": {
+      "description": "Manages database schema and vector storage",
+      "responsibilities": [
+        "Design PostgreSQL schema",
+        "Configure vector database",
+        "Optimize queries",
+        "Handle data migrations"
+      ],
+      "files": [
+        "src/backend/models/",
+        "src/backend/database/"
+      ]
+    }
+  },
+  "commands": {
+    "setup": "npm install && pip install -r requirements.txt",
+    "dev": "npm run dev",
+    "test": "pytest && npm test",
+    "lint": "black src/ai && flake8 src/ai && npm run lint",
+    "build": "npm run build"
+  },
+  "environment": {
+    "required": [
+      "OPENAI_API_KEY",
+      "DATABASE_URL",
+      "PINECONE_API_KEY"
+    ],
+    "optional": [
+      "ANTHROPIC_API_KEY",
+      "SMTP_HOST",
+      "SMTP_PORT"
+    ]
+  }
+}
