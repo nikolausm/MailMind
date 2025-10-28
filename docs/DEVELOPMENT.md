@@ -1,5 +1,36 @@
 # MailMind Development Guide
 
+## Inhaltsverzeichnis
+
+- [Quick Start](#quick-start)
+- [Project Structure](#project-structure)
+- [AI Agents](#ai-agents)
+- [Development with Claude Code](#development-with-claude-code)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
+
+## In diesem Dokument
+
+- **[Quick Start](#quick-start)**: Schnelle Einrichtung des Entwicklungsumfelds
+- **[Project Structure](#project-structure)**: Überblick über die Projektorganisation und Verzeichnisstruktur
+- **[AI Agents](#ai-agents)**: Spezialisierte KI-Agenten und deren Funktionen
+- **[Development with Claude Code](#development-with-claude-code)**: Richtlinien für die Entwicklung mit Claude Code
+- **[Testing](#testing)**: Test-Strategien und Ausführung
+- **[Deployment](#deployment)**: Anwendungsbereitstellung mit Docker
+- **[Contributing](#contributing)**: Beitragsprozess und Richtlinien
+
+## Verwandte Dokumente
+
+- **[AI-Agenten](./ai-agents.md)**: Detaillierte AI-Agent-Spezifikationen und Architektur
+- **[Agent-Architektur](./agent-architecture.md)**: Multi-Agent-System-Design
+- **[Email-Pipeline](./email-pipeline.md)**: Email-Verarbeitungsprozesse
+- **[Vektor-Datenbank](./vector-database.md)**: Embedding-Integration und semantische Suche
+- **[Authentifizierung](./AUTHENTICATION.md)**: Entwicklungsaspekte der Authentifizierung
+- **[Internationalisierung](./internationalization.md)**: i18n-Entwicklungsrichtlinien
+- **[Dokumentations-Struktur](./DOCUMENTATION_STRUCTURE.md)**: Dokumentationsstandards
+
 ## Quick Start
 
 1. **Clone the repository**

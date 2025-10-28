@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+  
+  /* Fix code block styling */
+  .prose pre {
+    @apply bg-gray-900 !important;
+  }
+  
+  .prose pre code {
+    @apply text-gray-100 bg-transparent p-0 !important;
+    color: #e5e7eb !important;
+  }
+  
+  /* Inline code styling */
+  .prose :not(pre) > code {
+    @apply bg-gray-100 text-red-600 px-1 py-0.5 rounded text-sm;
+  }
+  
+  /* Syntax highlighting overrides */
+  .hljs {
+    background: #1f2937 !important;
+    color: #e5e7eb !important;
+  }
+  
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-literal,
+  .hljs-section,
+  .hljs-link {
+    color: #60a5fa !important;
+  }
+  
+  .hljs-string,
+  .hljs-title,
+  .hljs-name,
+  .hljs-type,
+  .hljs-attribute,
+  .hljs-symbol,
+  .hljs-bullet,
+  .hljs-addition,
+  .hljs-variable,
+  .hljs-template-tag,
+  .hljs-template-variable {
+    color: #34d399 !important;
+  }
+  
+  .hljs-comment,
+  .hljs-quote,
+  .hljs-deletion,
+  .hljs-meta {
+    color: #9ca3af !important;
+  }
+  
+  .hljs-keyword,
+  .hljs-selector-class,
+  .hljs-builtin,
+  .hljs-title.function_ {
+    color: #c084fc !important;
+  }
+  
+  .hljs-number {
+    color: #fbbf24 !important;
+  }
+}

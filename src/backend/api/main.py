@@ -13,7 +13,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Import routers
-# from .routes import emails, auth, ai
+from routes import docs
+# from routes import emails, auth, ai
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -37,7 +38,7 @@ app = FastAPI(
 # Configure CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["http://localhost:3000", "http://localhost:9000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -50,3 +51,6 @@ async def root():
 @app.get("/health")
 async def health_check():
     return {"status": "healthy"}
+
+# Include routers
+app.include_router(docs.router)
