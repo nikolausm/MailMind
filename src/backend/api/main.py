@@ -13,8 +13,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Import routers
-from routes import docs
-# from routes import emails, auth, ai
+from routes import docs, emails
+# from routes import auth, ai
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -54,3 +54,4 @@ async def health_check():
 
 # Include routers
 app.include_router(docs.router)
+app.include_router(emails.router)
